@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ccc;
+    color: #fff;
+    font-family: 'Barlow', sans-serif;
+}
+
+input:focus{
+    background-color: #eee !important;
+    transform: scale(1.02);
+}
+
+#total
+{
+    border-radius: 4px;
+    padding: 8px 4px;
+    cursor:auto !important;
+}
+#total::before
+{
+    content: 'Total:';
+
+}
+#search{
+    cursor:auto !important;
+}
+button{
+    width: 100%;
+    transition:all 3s !important;
+    border-radius: 10px !important;
+}
+.btnRow:hover{
+    letter-spacing: 0 !important;
+}
+button:hover{
+    letter-spacing: 2px;
+}
+table
+{
+    margin: 10px 0;
+}
+table th{
+    text-transform: uppercase;
+}
+th,td{
+    padding: 15px !important;
+}

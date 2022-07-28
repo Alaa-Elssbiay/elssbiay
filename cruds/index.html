@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/file.css">
+</head>
+<body class="table table-active">
+    <div class="crud ">
+        <div class="head text-center text-uppercase  my-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>crud</h2>
+                        <p>product management system</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inputs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" id="tittle" placeholder="tittle">
+                    </div>
+                
+                        <div class="price py-2" >
+                            <div class="col-md-12 d-flex gap-2 ">
+                                <input onkeyup="getTotal()" type="text" class="form-control" id="price" placeholder="price">
+                                <input onkeyup="getTotal()" type="text" class="form-control" id="taxes" placeholder="taxes">
+                                <input onkeyup="getTotal()" type="text" class="form-control" id="ads" placeholder="ads">
+                                <input onkeyup="getTotal()" type="text" class="form-control" id="discount" placeholder="discount">
+                                <small id="total" class=" btn btn-danger "> </small>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control my-2" id="count" placeholder="count">
+                                <input type="text" class="form-control my-2" id="category" placeholder="category">
+                                <button class="btn btn-success" id="create">Create</button>
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+
+        </div>
+
+        <div class="outputs">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-12">
+                        <input onkeyup="searchDate(this.value)" type="text" id="search" class="form-control btn btn-light" placeholder="search">
+                    </div>
+                    <div class="col-md-12 d-flex gap-5"> 
+                        <button onclick="getSearchMood(this.id)" class="btn btn-info  my-2  " id="searchTitle"> Search By Title</button>
+                        <button onclick="getSearchMood(this.id)" class="btn btn-info  my-2 " id="searchCategory"> Search By Category</button>
+
+                    </div>
+                    <div class="col-md-12"> 
+                        <div id="deleteAll"></div>
+                        <table class=" table my-2 text-muted text-center">
+                            <thead>
+                                <th>id</th>
+                                <th>tittle</th>
+                                <th>price</th>
+                                <th>taxes</th>
+                                <th>ads</th>
+                                <th>discount</th>
+                                <th>total</th>
+                                <th>category</th>
+                                <th>update</th>
+                                <th>delete</th>
+                            </thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
